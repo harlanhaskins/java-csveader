@@ -66,7 +66,7 @@ public class CSVReader {
                     numbers[i] = 0;
                 }
                 else {
-                    numbers[i] = Integer.parseInt(split[i]);
+                    numbers[i] = Integer.parseInt(numberString);
                 }
             }
             arr[count] = numbers;
