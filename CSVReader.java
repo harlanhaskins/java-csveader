@@ -61,7 +61,13 @@ public class CSVReader {
             String[] split = str.split(",");
             int[] numbers = new int[split.length];
             for (int i =0; i<split.length; i++) {
-                numbers[i] = Integer.parseInt(split[i]);
+                String numberString = split[i];
+                if (numberString.equals("")) {
+                    numbers[i] = 0;
+                }
+                else {
+                    numbers[i] = Integer.parseInt(split[i]);
+                }
             }
             arr[count] = numbers;
             count++;
